@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Board from './Board';
 import Hoc from './HOC';
 
+
+// TODO : Calculer le gagnant
 function calculateWinner(squares) {
     const lines = [
         [0, 1, 2],
@@ -29,7 +31,7 @@ class Game extends Component {
         this.state = {
             squares: Array(42).fill(null),
             redIsNext: true,
-
+            showInfo: 'visible',
         };
     }
 
@@ -46,6 +48,7 @@ class Game extends Component {
                 table0.push(int);
             }
         }
+
         let table1 = table0.map((nb) => nb+1);
         let table2 = table0.map((nb) => nb+2);
         let table3 = table0.map((nb) => nb+3);
@@ -137,12 +140,33 @@ class Game extends Component {
         });
     }
 
+    showInfoMenu() {
+        var showInfo = this.state.showInfo;
+        if (showInfo === 'visible') {
+            this.setState({showInfo: 'hidden'})
+        } else {
+            this.setState({showInfo: 'visible'})
+        }
+    }
+
+    getStatus() {
+        return (<div className="info" style={{visibility: this.state.showInfo}}><h2>Tour du joueur
+            : </h2>{this.state.redIsNext ? <h2 className="h2-rouge">Rouge</h2> : <h2 className="h2-jaune">Jaune</h2>}
+        </div>);
+    }
 
     render() {
+        let status = this.getStatus();
         return (
-            <Board
-                squares={this.state.squares}
-                onClick={(i) => this.handleClick(i)}/>
+            <div className="main">
+                <button onClick={() => this.showInfoMenu()}>Cacher/Montrer les informations</button>
+                {status}
+                <div className="game">
+                    <Board
+                        squares={this.state.squares}
+                        onClick={(i) => this.handleClick(i)}/>
+                </div>
+            </div>
         );
     }
 

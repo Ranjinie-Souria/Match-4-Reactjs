@@ -17,16 +17,25 @@ code {
   background-color: crimson;
   width: 50px;
   height: 50px;
+  max-width: 50px;
+  max-height: 50px;
+  min-width: 20px;
+  min-height: 20px;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 30px;
   border: dotted 1px red;
   box-shadow: darkred inset 0 2px 20px;
-
-
 }
+
 .jeton-jaune{
   background-color: orange;
   width: 50px;
   height: 50px;
+  max-width: 50px;
+  max-height: 50px;
+  min-width: 20px;
+  min-height: 20px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 30px;
@@ -36,7 +45,7 @@ code {
 
 table {
   margin: 50px;
-  padding: 20px;
+  padding: 15px;
   width: 50%;
   text-align: center;
   height: 50%;
@@ -44,17 +53,85 @@ table {
   margin-left: auto;
   margin-right: auto;
   border-radius: 5px;
-  border: solid 1px midnightblue;
-  background-color: darkslateblue;
-  box-shadow: black inset 0 2px 20px;
+  border: solid 1px #251560;
+  background-color: #453580;
+  box-shadow: #251560 inset 3px 2px 20px;
 }
 
 td {
+  min-width: 20px;
+  min-height: 30px;
   width: 50px;
   height: 60px;
+  max-width: 50px;
+  max-height: 60px;
+  text-align: center;
   color: aliceblue;
   border-radius: 5px;
   border: solid 1px darkslateblue;
   background-color: midnightblue;
   box-shadow: black inset 2px 2px 15px;
 }
+
+.main {
+  margin: 3%;
+  width: 90%;
+  padding: 3px;
+}
+
+.game {
+  margin: 3%;
+  width: 90%;
+  padding: 3px;
+}
+
+h2 {
+  text-shadow: darkslateblue 3px 0;
+  border-bottom: dotted 1px rebeccapurple;
+  border-bottom-width: 2px;
+}
+
+.h2-jaune {
+  text-shadow: darkorange 2px 0;
+  border-bottom: dotted 1px orange;
+  border-bottom-width: 2px;
+  color: #ffdd50;
+}
+
+.h2-rouge {
+  text-shadow: crimson 2px 0;
+  border-bottom: dotted 1px crimson;
+  border-bottom-width: 2px;
+  color: salmon;
+}
+
+button {
+  background-color: RGBA(0%, 0%, 0%, 0.3);
+  border: solid 1px black;
+  border-top: solid 1px darkslateblue;
+  border-bottom: solid 1px darkslateblue;
+  box-shadow: black 2px 2px 5px;
+  color: aliceblue;
+  text-shadow: darkslateblue 0 1px;
+  border-radius: 3px;
+  padding: 3px;
+  margin: 3px;
+}
+
+.info {
+  z-index: 1;
+  position: fixed;
+  width: 20%;
+  padding: 10px;
+  background-color: RGBA(0%, 0%, 0%, 0.3);
+  border-top: solid 20px darkslateblue;
+  border-bottom: solid 20px darkslateblue;
+  box-shadow: black inset 2px 2px 15px;
+  border-radius: 3px;
+  color: aliceblue;
+  text-shadow: darkslateblue 0 1px;
+  font-family: 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+}
+
