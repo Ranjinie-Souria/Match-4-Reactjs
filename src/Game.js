@@ -4,6 +4,7 @@ import Hoc from './HOC';
 
 function calculateWinner(squares) {
     let lines = [];
+
     for (let i = 0; i < 42; i++) {
         lines.push([i, i + 1, i + 2, i + 3]);
     }
@@ -25,6 +26,12 @@ function calculateWinner(squares) {
     for (let i = 20; i > 16; i--) {
         lines.push([i, i + 6, i + 6 * 2, i + 6 * 3]);
     }
+    for (let i = 0; i < 7; i++) {
+        lines.push([i, i + 7, i + 7 * 2, i + 7 * 3]);
+        lines.push([i + 7, i + 7 * 2, i + 7 * 3, i + 7 * 4]);
+        lines.push([i + 7 * 2, i + 7 * 3, i + 7 * 4, i + 7 * 5]);
+    }
+
     for (let i = 0; i < lines.length; i++) {
         const [a, b, c, d] = lines[i];
         // Vérifie si les cases sont égales et non nulles

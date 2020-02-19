@@ -18,9 +18,9 @@ function Square(props){
 
     let style = [];
     if (props.colorWinner) {
-        style[0] = 'cyan';
-        style[1] = 'darkcyan inset 2px 2px 15px';
-        style[2] = 'dashed 2px aqua';
+        style[0] = 'aqua';
+        style[1] = 'purple inset 2px 2px 15px';
+        style[2] = 'dotted 2px purple';
     } else {
         style[0] = 'midnightblue';
         style[1] = 'black inset 2px 2px 15px';

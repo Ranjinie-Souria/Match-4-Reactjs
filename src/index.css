@@ -105,7 +105,6 @@ h2 {
   border-bottom-width: 2px;
   color: salmon;
   max-font-size: 16px;
-
 }
 
 button {
@@ -127,7 +126,6 @@ button {
 
 .info {
   width: 50%;
-  padding: 10px;
   background-color: RGBA(0%, 0%, 0%, 0.3);
   border-top: solid 10px darkslateblue;
   border-bottom: solid 10px darkslateblue;
@@ -135,7 +133,7 @@ button {
   border-radius: 3px;
   margin-right: auto;
   margin-left: auto;
-  margin-top: -130px;
+  margin-top: -50px;
   color: aliceblue;
   text-shadow: darkslateblue 0 1px;
   font-family: 'Roboto', 'Oxygen',
