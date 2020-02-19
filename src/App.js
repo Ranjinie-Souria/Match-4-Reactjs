@@ -1,5 +1,3 @@
-// App.js
-
 import React, { Component } from 'react';
 import Game from './Game';
 import Hoc from './HOC';

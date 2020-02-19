@@ -15,8 +15,21 @@ function jeton(props){
 }
 
 function Square(props){
+
+    let style = [];
+    if (props.colorWinner) {
+        style[0] = 'cyan';
+        style[1] = 'darkcyan inset 2px 2px 15px';
+        style[2] = 'dashed 2px aqua';
+    } else {
+        style[0] = 'midnightblue';
+        style[1] = 'black inset 2px 2px 15px';
+        style[2] = 'solid 1px darkslateblue';
+    }
+
         return (
-                <td onClick={props.onClick} >
+            <td style={{backgroundColor: style[0], boxShadow: style[1], border: style[2]}}
+                onClick={props.onClick}>
                     {jeton(props.value)}
                 </td>
         );

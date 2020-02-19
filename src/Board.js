@@ -1,11 +1,19 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Square from './Square';
 
 class Board extends Component {
 
+    static calculateVictory(winner, i) {
+        if (winner != null) {
+            if (winner[1][0] === i || winner[1][1] === i || winner[1][2] === i || winner[1][3] === i) {
+                return true;
+            }
+        }
+    }
 
     renderSquare(i){
         return <Square key={i}
+                       colorWinner={Board.calculateVictory(this.props.colorWinner, i)}
                        value={this.props.squares[i]}
                        onClick={() => this.props.onClick(i)}
         />;
@@ -14,19 +22,20 @@ class Board extends Component {
     createBoard(){
         let leBoard = [];
         let table = [];
+
         for (let i = 0; i<49; i++) {
             if (i % 7 === 0) {
                 table.push(i);
             }
         }
 
-        let indice = -1;
+        let indice = 0;
         for (let i = 0; i<=49; i++){
             if(i%7===0){
-                indice += 1;
                 for(let a = table[indice]; a < table[indice+1]; a++) {
                     leBoard.push(this.renderSquare(a));
                 }
+                indice += 1;
             }
         }
 
