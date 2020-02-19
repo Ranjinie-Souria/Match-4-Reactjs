@@ -2,13 +2,11 @@ import React, { Component } from 'react';
 import Board from './Board';
 import Hoc from './HOC';
 
-
 function calculateWinner(squares) {
     let lines = [];
     for (let i = 0; i < 42; i++) {
         lines.push([i, i + 1, i + 2, i + 3]);
     }
-
     for (let i = 0; i < 4; i++) {
         lines.push([i, i + 8, i + 8 * 2, i + 8 * 3]);
     }
@@ -18,8 +16,6 @@ function calculateWinner(squares) {
     for (let i = 14; i < 18; i++) {
         lines.push([i, i + 8, i + 8 * 2, i + 8 * 3]);
     }
-
-    let line = [];
     for (let i = 6; i > 2; i--) {
         lines.push([i, i + 6, i + 6 * 2, i + 6 * 3]);
     }
@@ -29,7 +25,6 @@ function calculateWinner(squares) {
     for (let i = 20; i > 16; i--) {
         lines.push([i, i + 6, i + 6 * 2, i + 6 * 3]);
     }
-
     for (let i = 0; i < lines.length; i++) {
         const [a, b, c, d] = lines[i];
         // Vérifie si les cases sont égales et non nulles
@@ -38,7 +33,6 @@ function calculateWinner(squares) {
         }
     }
     return null;
-
 }
 
 class Game extends Component {
@@ -71,7 +65,6 @@ class Game extends Component {
         let table4 = table0.map((nb) => nb+4);
         let table5 = table0.map((nb) => nb+5);
         let table6 = table0.map((nb) => nb+6);
-
 
         let ligne;
 
@@ -168,6 +161,14 @@ class Game extends Component {
         }
     }
 
+    resetGame() {
+        this.setState({
+            squares: Array(42).fill(null),
+            redIsNext: true,
+            showInfo: 'visible',
+        })
+    }
+
     getStatus() {
         const winner = calculateWinner(this.state.squares);
         if (winner) {
@@ -177,6 +178,7 @@ class Game extends Component {
             }
             return (<div className="info" style={{visibility: this.state.showInfo}}><h2>Gagnant : </h2>{red ?
                 <h2 className="h2-rouge">Rouge</h2> : <h2 className="h2-jaune">Jaune</h2>}
+                <button onClick={() => this.resetGame()}>Recommencer à jouer</button>
             </div>);
         } else {
             let nb = 0;
@@ -187,16 +189,14 @@ class Game extends Component {
             }
             if (nb === 0) {
                 return (<div className="info" style={{visibility: this.state.showInfo}}><h2>Personne ne gagne ! </h2>
+                    <button onClick={() => this.resetGame()}>Recommencer à jouer</button>
                 </div>);
             } else {
                 return (<div className="info" style={{visibility: this.state.showInfo}}><h2>Tour du joueur
                     : </h2>{this.state.redIsNext ? <h2 className="h2-rouge">Rouge</h2> :
-                    <h2 className="h2-jaune">Jaune</h2>}
-                </div>);
+                    <h2 className="h2-jaune">Jaune</h2>}</div>);
             }
         }
-
-
     }
 
     render() {
@@ -204,9 +204,10 @@ class Game extends Component {
         const winner = calculateWinner(this.state.squares);
         return (
             <div className="main">
-                <button id="showInfo" onClick={() => this.showInfoMenu()}>Cacher les informations</button>
-                {status}
-                <div className="game">
+                <button id="showInfo" className="button-info" onClick={() => this.showInfoMenu()}>Cacher les
+                    informations
+                </button>
+                <div className="game">{status}
                     <Board
                         colorWinner={winner}
                         squares={this.state.squares}

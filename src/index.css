@@ -44,14 +44,12 @@ code {
 }
 
 table {
-  margin: 50px;
   padding: 15px;
   width: 50%;
   text-align: center;
   height: 50%;
   color: aliceblue;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 5px auto;
   border-radius: 5px;
   border: solid 1px #251560;
   background-color: #453580;
@@ -75,7 +73,7 @@ td {
 
 .main {
   margin: 3%;
-  width: 90%;
+  width: 100%;
   padding: 3px;
 }
 
@@ -89,6 +87,7 @@ h2 {
   text-shadow: darkslateblue 3px 0;
   border-bottom: dotted 1px rebeccapurple;
   border-bottom-width: 2px;
+  max-font-size: 16px;
 }
 
 .h2-jaune {
@@ -96,6 +95,8 @@ h2 {
   border-bottom: dotted 1px orange;
   border-bottom-width: 2px;
   color: #ffdd50;
+  max-font-size: 16px;
+
 }
 
 .h2-rouge {
@@ -103,6 +104,8 @@ h2 {
   border-bottom: dotted 1px crimson;
   border-bottom-width: 2px;
   color: salmon;
+  max-font-size: 16px;
+
 }
 
 button {
@@ -118,16 +121,21 @@ button {
   margin: 3px;
 }
 
+.button-info {
+  margin-left: 60%;
+}
+
 .info {
-  z-index: 1;
-  position: fixed;
-  width: 20%;
+  width: 50%;
   padding: 10px;
   background-color: RGBA(0%, 0%, 0%, 0.3);
-  border-top: solid 20px darkslateblue;
-  border-bottom: solid 20px darkslateblue;
+  border-top: solid 10px darkslateblue;
+  border-bottom: solid 10px darkslateblue;
   box-shadow: black inset 2px 2px 15px;
   border-radius: 3px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: -130px;
   color: aliceblue;
   text-shadow: darkslateblue 0 1px;
   font-family: 'Roboto', 'Oxygen',

@@ -26,7 +26,6 @@ function Square(props){
         style[1] = 'black inset 2px 2px 15px';
         style[2] = 'solid 1px darkslateblue';
     }
-
         return (
             <td style={{backgroundColor: style[0], boxShadow: style[1], border: style[2]}}
                 onClick={props.onClick}>
