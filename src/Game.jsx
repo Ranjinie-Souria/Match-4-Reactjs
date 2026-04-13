@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import Board from './Board';
-import Hoc from './HOC';
 
 function calculateWinner(squares) {
     let lines = [];

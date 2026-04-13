@@ -1,19 +1,22 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .App-logo {
+  width: 50px;
+  position: absolute;
   pointer-events: none;
-    float: right;
-    margin-top: -108px;
+  top: 0;
+  right: 0;
 }
 
 .App-main {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: RGBA(0%, 0%, 0%, 0.3);
-    border-radius: 30px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*noinspection ALL*/
@@ -24,24 +27,20 @@
 }
 
 .App-header {
-    min-height: 100px;
-  font-size: calc(10px + 2vmin);
   color: white;
-    text-align: left;
-    background-color: RGBA(0%, 0%, 0%, 0.3);
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-    box-shadow: black inset 2px 2px 15px;
-    text-shadow: crimson 5px 3px 0;
-    border-top: solid 10px darkslateblue;
-    border-bottom: solid 10px crimson;
-    margin-bottom: 100px;
+  text-align: left;
+  background-color: RGBA(0%, 0%, 0%, 0.3);
+  font-family:
+    source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  box-shadow: black inset 2px 2px 15px;
+  text-shadow: crimson 5px 3px 0;
+  border-top: solid 3px darkslateblue;
+  border-bottom: solid 3px crimson;
 }
 
 a {
-    color: crimson;
+  color: crimson;
 }
-
 
 @keyframes App-logo-spin {
   from {

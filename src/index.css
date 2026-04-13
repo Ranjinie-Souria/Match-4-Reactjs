@@ -1,19 +1,19 @@
 body {
   margin: 0;
   background-color: #282c34;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family:
+    source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-.jeton-rouge{
+.jeton-rouge {
   background-color: crimson;
   width: 50px;
   height: 50px;
@@ -28,7 +28,7 @@ code {
   box-shadow: darkred inset 0 2px 20px;
 }
 
-.jeton-jaune{
+.jeton-jaune {
   background-color: orange;
   width: 50px;
   height: 50px;
@@ -71,32 +71,21 @@ td {
   box-shadow: black inset 2px 2px 15px;
 }
 
-.main {
-  margin: 3%;
-  width: 100%;
-  padding: 3px;
-}
-
-.game {
-  margin: 3%;
-  width: 90%;
-  padding: 3px;
+h1 {
+  margin: 0;
 }
 
 h2 {
   text-shadow: darkslateblue 3px 0;
-  border-bottom: dotted 1px rebeccapurple;
-  border-bottom-width: 2px;
-  max-font-size: 16px;
+  margin: auto;
 }
 
 .h2-jaune {
   text-shadow: darkorange 2px 0;
   border-bottom: dotted 1px orange;
   border-bottom-width: 2px;
+  width: 30%;
   color: #ffdd50;
-  max-font-size: 16px;
-
 }
 
 .h2-rouge {
@@ -104,7 +93,6 @@ h2 {
   border-bottom: dotted 1px crimson;
   border-bottom-width: 2px;
   color: salmon;
-  max-font-size: 16px;
 }
 
 button {
@@ -117,7 +105,7 @@ button {
   text-shadow: darkslateblue 0 1px;
   border-radius: 3px;
   padding: 3px;
-  margin: 3px;
+  margin: auto;
 }
 
 .button-info {
@@ -127,17 +115,15 @@ button {
 .info {
   width: 50%;
   background-color: RGBA(0%, 0%, 0%, 0.3);
-  border-top: solid 10px darkslateblue;
-  border-bottom: solid 10px darkslateblue;
   box-shadow: black inset 2px 2px 15px;
+  border-top: solid 2px darkslateblue;
   border-radius: 3px;
   margin-right: auto;
   margin-left: auto;
-  margin-top: -50px;
+  margin-top: -5px;
   color: aliceblue;
   text-shadow: darkslateblue 0 1px;
-  font-family: 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif;
+  font-family:
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
 }
-
