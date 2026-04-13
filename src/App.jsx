@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import Game from './Game';
 import './App.css'
-import Hoc from './HOC';
 
 
 class App extends Component {
