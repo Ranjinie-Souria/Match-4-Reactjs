@@ -6,11 +6,13 @@ It was originally bootstrapped with [Create React App](https://github.com/facebo
 
 This project is kept as an archive and is no longer actively developed.
 
+The game is available at https://ranjinie-souria.github.io/Match-4-Reactjs/
+
 ## 📌 Status
 
 ⚠️ **Archived / Completed**
 
-This project is finished and will not receive further updates.  
+This project is finished and will not receive further updates.
 
 ## 🎮 About the project
 
@@ -27,7 +29,6 @@ This is a classic **Connect Four** implementation:
 - Vite (migrated from Create React App)
 - JavaScript / JSX
 - CSS
-
 
 ## 🚀 Running the project
 
